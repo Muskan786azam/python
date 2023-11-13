@@ -1,0 +1,67 @@
+import os
+print("lets start the file handling program")
+print("1.create a file \n2.read the file \n3.list the file \n4.edit the file \n5.delete the file \n6.stop program")
+while True:
+    a=int(input("enter the choice:"))
+    def fi():
+        print("1.create the file")
+        print("2.read the file")
+        print("3.list the file")
+        print("4.edit the file")
+        print("5.delete the file")
+        print("6.stop the program")
+    match a:
+        case 1:
+            print("\ncreating the file")
+            name=input("enter the file name:")
+            name=name+".txt"
+            file=open(name,"w")
+            file.write("hello")
+            print("file created successfully")
+            print("____________________________")
+            fi()
+        case 2:
+            print("\nreading the file")
+            name=input("enter the file name:")
+            name=name+".txt"
+            file=open(name,"r")
+            print(file.read())
+            print("_______________________________")
+            fi()
+        case 3:
+            print("\nlisting a file")
+            print("_________________________")
+            path="C:\pythonpro"
+            files=os.listdir(path)
+            for file in files:
+                print(file)
+            print("__________________________")
+            fi()
+        case 4:
+            print("\nediting the file")
+            name=input("enter the file name:")
+            name=name+".txt"
+            file=open(name,"a")
+            print(file.write("muskan"))
+            print("_______________________")
+            fi()
+        case 5:
+            print("\ndeleting a file")
+            name=input("enter the file name:")
+            name=name+".txt"
+            os.remove(name)
+            print("file",name,"deleted successfully")
+            print("________________________________")
+            fi()
+        case 6:
+            import sys
+            print("*______________program end______________________*")
+            sys.exit(0)
+                      
+                  
+                  
+            
+            
+          
+              
+              
